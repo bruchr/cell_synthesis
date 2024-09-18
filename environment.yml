@@ -1,0 +1,21 @@
+name: cell_syn
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - cudatoolkit=11.3.1
+  - numpy=1.23.4
+  - pip=22.3
+  - python=3.9.13
+  - pytorch=1.12.1
+  - scikit-image=0.19.3
+  - scipy=1.9.3
+  - tensorboard
+  - tifffile=2022.10.10
+  - torchvision=0.13.1
+  - tqdm=4.64.1
+  - pip:
+    - hjson==3.1.0
+    - pynrrd==1.0.0
+    - torchsummary==1.5.1

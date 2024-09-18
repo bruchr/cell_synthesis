@@ -1,0 +1,69 @@
+{  
+  "output_path": "./out",
+  
+  "input_phantom_folders": [
+    "./images/extracted_phantoms1",
+    "./images/extracted_phantoms2"
+  ],
+  "input_phantom_folders_prop": [
+    0.5,
+    0.5
+  ],
+  
+  "input_spheroid_mask": [
+    "./images/extracted_masks/spheroid_mask_0.tif"
+  ],
+  "paths_psf": [
+    "./images/extracted_psf/extraxted_psf_zoom1d16_32b.tif",
+    "./images/extracted_psf/extraxted32b_pntMan_psf_zoom1d0_combined.tif"
+  ],
+  
+  "use_gpu_conv" : 1,
+  "generated_image_shape": [],
+  "num_of_images": 1,
+
+  "max_overlap": 0,
+  "min_dist": 0,
+  "break_criterion_positions": 50,
+  "break_criterion_objects": 20,
+
+  "brightness_red_fuction": "f3p",
+  "brightness_red_factor_b": 200,
+
+  "exposure_percentage": 1.0,
+  "dc_baseline": 15,
+  "noise_gauss": 1.7,
+  "noise_gauss_absolute": 8,
+  "noise_poisson_factor": 0.75,
+  "num_of_acquisition_iterations": 1,
+  
+  "px_size_phantom_img": [
+    0.4501347,
+    0.0610951,
+    0.0610951
+  ],
+  "px_size_sim_img": [
+    1.5001311,
+    0.488759,
+    0.488759
+  ],
+  "px_size_desired": [
+    1.5001311,
+    0.488759,
+    0.488759
+  ],
+  
+  "input_fragment_folder": "./images/extracted_fragments",
+  "fragment_probability": 0.2,
+
+  "input_subculture_folder": "./images/extracted_subculture_phantoms",
+  "num_of_subcultures": 0,
+  "subculture_radius_xy": 175,
+  "subculture_radius_z": 10,
+  "subculture_min_dist": 0,
+  "px_size_subculture_phantoms": [
+    0.3250898,
+    0.04253006666,
+    0.04253006666
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  experiment: experiment_name
+  dataset_folder: ./path/to/data
+  output_folder: ./path/to/output_folder
+
+  mode: train
+  # train OR inference
+  direction: BtoA
+  direction_inference: BtoA
+  save_model_every_x_epochs: 500
+  
+  resume_training: 0
+  epoch_count: 0 # epoch number to start/resume training at.
+
+  norm: instance
+  netG: resnet_6blocks
+  discriminator: PatchGANDiscriminator
+  ngf: 64
+
+  batch_size: 1
+  virtual_dataset_multiplicator: 2
+  pool_size: 50
+  learning_rate: 0.0002
+  learning_rate_fix: 3000 # No. of epochs with fixed lr
+  learning_rate_decay: 3000 # No. of epochs with reduced lr
+  train_d_every_x: 1 # train discriminator every x epoch. Usefull if discriminator is constantly outperforming the generator during training.
+  lambda_identity: 10
+  lambda_cycle_A: 10
+  lambda_cycle_B: 10
+  
+  img_dim: 3 # 3 for 3D image data, 2 for 2D
+  A_nc: 1 # Number of input image channels (domain A)
+  B_nc: 1 # Number of input image channels (domain B)
+  crop_size: [32, 256, 256]
+  # crop_size needs to be dividable by 2 at least 2 times. Dimensionality will be reduced if one element is one.
+  preprocess: crop
+  
+  inf_patch_size: [32, 256, 256]
+  inf_patch_overlap: 0.5
+  
+  no_timestamp: false # No timestamp is added to experiment name.
+  time_limit: 0 # Time limit of training in seconds.
+}
